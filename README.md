@@ -38,7 +38,6 @@ Bu şekilde, tarım ve bina yerleşim sistemlerini sahne bazlı ayırarak daha m
 ## 🛠 Kullanılan Teknolojiler
 - **Unity 2022.3.x** (LTS)
 - **C# ile Tilemap & Grid Sistemi**
-- **JSON ile veri kaydetme & yükleme**
 - **Event Trigger ile UI Etkileşimi**
 
 ## 🎮 Kurulum ve Çalıştırma
