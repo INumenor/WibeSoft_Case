@@ -4,7 +4,7 @@ public class InputHandler : MonoBehaviour
 {
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // Sol týk veya mobil dokunma
+        if (Input.GetMouseButtonDown(0))
         {
             Vector3 touchPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             HandleTouch(touchPosition);
