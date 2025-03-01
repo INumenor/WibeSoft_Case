@@ -1,7 +1,36 @@
 # WibeSoft_Case
 Client Geliştirici Görevleri (Unity C#)
-1.Görev çalışma mantığı : Sistem içinde Crop ayrı tutabildiğim bir SO yapısı design ettim. Bunun sayesinde tohum tarla ile temasa geçildiği zaman gerekli veriler tutulabilmektedir.Tarlada bunun sayesinde farklı aynı yapıda olan tohumlarla kullanılabilmeketedir. Grid yapısı oluşturmak için katmanlı tilemap yapısı kullandım tarla sayısı tek tuttum. Amacın ekim ve büyüme süreci olmasından dolayı . Kodu yazarken projenin büyümemesi için ienumerator kullandım fakat UniTask kullanılması her koşulda daha sağlıklı olacaktır. Mimari design ederken diğer mekanikleri göz önüne almadığım için belli başlı iyileştirmeler ile daha kullanılabilir bir yapıya dönüştürülebilir.
+1. Görev: Tarım Sistemi
+Bu görev kapsamında, ekim ve büyüme sürecini yönetmek için ScriptableObject (SO) tabanlı bir yapı tasarladım. Bu yapı sayesinde, tohumun tarla ile temasa geçtiği anda gerekli veriler saklanabilmekte ve farklı tohum türleri aynı sistem içinde çalışabilmektedir.
 
-2.Görev çalışma mantığı : iki ana kod yapısından oluşmakta bunlar TilemapGridSystem alandaki boş konulabilir alanları check etmekte ve bunların kullanılabilir olup olmadığını update ve bina yerleşiminde kontrol etmektedir. Building kodu ise yapılacak binanın kendi için tutması gerekli olan verileri barındırır. Bunun yanında o alana yerleştirilip yerleştirilemeyeceğini ve yerleştirme işlemine onay verme işlemlerini kendi kontrol eder.
+Tarla sistemini oluştururken katmanlı tilemap yapısını kullandım ve tek bir tarla üzerinden işleyişi sağladım. Projenin gereksiz büyümesini önlemek adına IEnumerator kullandım, ancak UniTask kullanımı her durumda daha verimli olacaktır. Mimari tasarım sırasında diğer mekanikleri göz önünde bulundurmadığım için sistem, bazı iyileştirmelerle daha genişletilebilir ve kullanışlı hale getirilebilir.
 
-Kullanış : Görevleri sahne sahne ayırdım. İlk sahnede button yardımı ile aldığınız tohumu tarlaya yerleştirmeniz ile büyüme süreci başlar. Bu sürecin aşamalarını spriteRenderer görsel geçişleri ile sağlanır. Ardından olmuş ekin toplanır. Kullanıcıya consolda bir feedback verir. Diğer sahneye geçiş button ile yapılabilmektedir. Sahnedeki buton yardımı ile elinize gelen binayı uygun karolara farenin sol tıkı ile test edebilirsiniz. Uygun yer bulunduğu zaman space tuşu işe bu işlem gerçekleştirilir. En son binayı silmek isterseniz de escape tuşu ile işlemi geri alabilirsiniz.
+2. Görev: Bina Yerleşim Sistemi
+Bu sistem iki ana kod yapısından oluşmaktadır:
+
+TilemapGridSystem: Haritadaki uygun alanları kontrol eder, bu alanların kullanılabilir olup olmadığını günceller ve bina yerleşimini yönetir.
+Building: Yapının kendi verilerini saklar ve seçilen alana yerleştirilip yerleştirilemeyeceğini kontrol eder. Aynı zamanda yerleşim işlemini onaylama sürecini de yönetir.
+
+Kullanım :
+Görevleri sahnelere ayırdım:
+
+Tarım Sistemi Sahnesi
+
+Button ile seçtiğiniz tohumu tarlaya yerleştirebilirsiniz.
+Ekim süreci başladıktan sonra SpriteRenderer kullanılarak görsel değişimlerle büyüme aşamaları gösterilir.
+Olgunlaşan ekin toplandığında, kullanıcıya konsolda bir geri bildirim verilir.
+Sonraki sahneye buton yardımıyla geçiş yapılabilir.
+Bina Yerleşim Sahnesi
+
+Button ile bir bina seçilir ve uygun karolara fare sol tık ile yerleştirme testi yapılır.
+Space tuşu ile uygun alan seçildiğinde bina yerleştirilir.
+Escape tuşu ile yerleştirilen bina geri alınabilir.
+Bu şekilde, tarım ve bina yerleşim sistemlerini sahne bazlı ayırarak daha modüler bir yapı oluşturmayı hedefledim.
+
+![](Assets/Images/1.png)
+![](Assets/Images/2.png)
+![](Assets/Images/3.png)
+![](Assets/Images/4.png)
+![](Assets/Images/5.png)
+![](Assets/Images/6.png)
+![](Assets/Images/7.png)
